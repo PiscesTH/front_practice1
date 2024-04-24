@@ -5,6 +5,11 @@ section{
 section:nth-child(2n){
     border-color: #f8f8f8;
 }
+section .about-selfL::after {
+    content: '';
+    clear: both;
+    display: block;
+}
 section .title {
     margin-bottom: 3rem;
 }
@@ -34,4 +39,15 @@ section .about-self .right {
 section .about-self .right h3 {
     font-size: 2.25rem;
     margin-bottom: 1rem;
+}
+section .about-self .right h3 strong {
+    color: #ed4848;
+}
+section .about-self .right p {
+    font-size: 1.15rem;
+    margin: 1rem 0;
+}
+section .about-self .right .social a {
+    font-size: 2.5rem;
+    margin-right: 0.2rem;
 }
