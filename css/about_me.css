@@ -1,11 +1,11 @@
-section{
+/* section{
     font-family: 'Poppins', sans-serif;
     padding: 5rem 0;
 }
 section:nth-child(2n){
     border-color: #f8f8f8;
 }
-section .about-selfL::after {
+section .about-self::after {
     content: '';
     clear: both;
     display: block;
@@ -23,7 +23,7 @@ section .title h2 {
 }
 section .title p {
     font-size: 1.15rem;
-}
+} 중복 코드 -> style.css 로 옮겨서 사용*/ 
 section .about-self .left {
     float: left;
     width: 50%;
