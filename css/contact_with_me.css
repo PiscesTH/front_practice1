@@ -1,0 +1,56 @@
+section .contact-me::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+section .contact-me .left {
+    width: 30%;
+    float: left;
+}
+section .contact-me .left .card{
+    border: 1px solid #ccc;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+section .contact-me .left .icon {
+    font-size: 2rem;
+    margin-right: 5px;
+}
+
+section .contact-me .right{
+    width: 65%;
+    float: left;
+    margin-left: 5%;
+    border: 1px solid #ccc;
+    padding: 1rem;
+}
+
+section .contact-me .right .form-group {
+    margin-bottom: 1.25rem;
+}
+
+section .contact-me .right .form-group label {
+    display: block;
+    margin-bottom: 0.85rem;
+}
+
+section .contact-me .right .form-group input{
+    width: 100%;
+    padding: 0.625rem;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+section .contact-me .right .form-group input:focus{
+    border: 1px solid ;
+    box-shadow: ;   
+}
+section .contact-me .right .form-group textarea{
+    width: 100%;
+    height: 300px;
+    outline: none;
+    resize: none;
+    border: 1px solid #ccc;
+}
