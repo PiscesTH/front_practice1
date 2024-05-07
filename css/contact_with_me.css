@@ -43,9 +43,10 @@ section .contact-me .right .form-group input{
     border: 1px solid #ccc;
     border-radius: 10px;
 }
-section .contact-me .right .form-group input:focus{
-    border: 1px solid ;
-    box-shadow: ;   
+section .contact-me .right .form-group input:focus,
+section .contact-me .right .form-group textarea:focus{
+    border: 1px solid #719ece;
+    box-shadow: 0 0 10px #719ece;   
 }
 section .contact-me .right .form-group textarea{
     width: 100%;
@@ -53,4 +54,11 @@ section .contact-me .right .form-group textarea{
     outline: none;
     resize: none;
     border: 1px solid #ccc;
+}
+section .contact-me .right button {
+    width: 100%;
+    padding: 1rem;
+    border-color: #f78b00;
+    border: none;
+    color: white;
 }
