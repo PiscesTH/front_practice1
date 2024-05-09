@@ -24,10 +24,11 @@ li {
 
 /* header */
 header {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     padding: 1rem;
+    z-index: 1;
 }
 
 header .container {
@@ -59,6 +60,20 @@ header nav ul li {
 
 header nav ul li button {
     font-size: 1.2rem;
+}
+
+header.active {
+    background-color: #000;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 /* main */
