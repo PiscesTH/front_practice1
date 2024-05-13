@@ -36,10 +36,11 @@
 })()
 // 최초 한번만 실행되면 됨 > 즉시 실행함수로 작성. 코드가 메모리에 남지않는다 ?
 
-// 수직 스크롤 발생하면 header 태그에 active 클래스 추가 및 삭제
+// 수직 스크롤 발생하면 header 태그에 active 클래스 추가 및 삭제. 위에처럼 즉시실행 함수로 만들어도 작동은 정상적으로 함.
 const headerEl = document.querySelector('header');
 window.addEventListener('scroll', function(){
-    scrollCheck();
+    // scrollCheck();   스크롤 될 때마다 실행 > 부담 증가
+    this.requestAnimationFrame(scrollCheck);    //웹브라우저가 허용 가능한 범위 내에서 실행 ? 최적화
 });
 
 function scrollCheck() {
@@ -50,4 +51,18 @@ function scrollCheck() {
         headerEl.classList.remove('active');
     }
     console.log('scroll');
+}
+
+//버튼
+const scrollMoveEl = document.querySelectorAll('[data-animation-scroll="true"]');
+for (let i = 0; i < scrollMoveEl.length; i++) {
+    scrollMoveEl[i].addEventListener('click', function(e){
+        animationMove(e.dataset.target)
+        console.log(e.dataset.target);
+    });
+}
+
+const animationMove = function(selector){
+    const target = document.querySelector(selector);
+    console.log(target);
 }
