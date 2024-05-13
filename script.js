@@ -54,15 +54,17 @@ function scrollCheck() {
 }
 
 //버튼
-const scrollMoveEl = document.querySelectorAll('[data-animation-scroll="true"]');
-for (let i = 0; i < scrollMoveEl.length; i++) {
-    scrollMoveEl[i].addEventListener('click', function(e){
-        animationMove(e.dataset.target)
-        console.log(e.dataset.target);
-    });
-}
-
 const animationMove = function(selector){
     const target = document.querySelector(selector);
-    console.log(target);
+    const browserScrollY = window.scrollY;
+    const targetScrollY = target.getBoundingClientRect().top + browserScrollY;
+    window.scrollTo({top: targetScrollY, behavior:'smooth'});
+}
+
+const scrollMoveEl = document.querySelectorAll('[data-animation-scroll="true"]');
+console.log(scrollMoveEl);
+for (let i = 0; i < scrollMoveEl.length; i++) {
+    scrollMoveEl[i].addEventListener("click", function(e){
+        animationMove(this.dataset.target);
+    });
 }
