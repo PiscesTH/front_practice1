@@ -149,7 +149,7 @@ for (let i = 0; i < scrollMoveEl.length; i++) {
             var thankYouMessage = form.querySelector(".thankyou_message");
             if (thankYouMessage) {
               thankYouMessage.style.display = "block";
-              alert("메일 전송에 성공했습니다. 확인 후 회신드리겠습니다.")
+              alert("메일 전송에 성공했습니다.);
             }
           }
       };
