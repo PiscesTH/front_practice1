@@ -81,7 +81,7 @@ main {
     width: 100%;
     height: 100vh;
     color: white;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/me.jpg') center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/main_background.jpg') center center;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -245,9 +245,10 @@ section .do-me .do-inner {
     background-color: #fff;
     margin-right: 5%;
     cursor: pointer;
+    margin-bottom: 3rem;
 }
 
-section .do-me .do-inner:last-child {
+section .do-me .do-inner:nth-child(3n) {
     margin-right: 0;
 }
 
@@ -422,11 +423,11 @@ section .contact-me .right button {
 
     section .portfolio-me .portfolio-inner {
         width: 48%;
-        margin-right: 4%;
+        margin-right: 0;
     }
 
-    section .portfolio-me .portfolio-inner:nth-child(2n) {
-        margin-right: 0;
+    section .portfolio-me .portfolio-inner:nth-child(2n+1) {
+        margin-right: 4%;
     }
 
     section .contact-me .left {
