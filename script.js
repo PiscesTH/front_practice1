@@ -69,6 +69,7 @@ for (let i = 0; i < scrollMoveEl.length; i++) {
     });
 }
 
+//이메일 발송
 (function() {
     // get all data in form and return object
     function getFormData(form) {
